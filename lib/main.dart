@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -36,6 +37,11 @@ class _MyHomePageState extends State<MyHomePage> {
       _counter++;
     });
   }
+  void _decrementCounter() {
+    setState(() {
+      _counter--;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -53,14 +59,27 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            SizedBox(height: 30),
+
+            Row(
+              mainAxisAlignment: .spaceAround,
+              children: [
+                FloatingActionButton(onPressed: _incrementCounter,
+                child: Icon(CupertinoIcons.plus),
+                ),
+                FloatingActionButton(onPressed: _decrementCounter,
+                child: Icon(CupertinoIcons.minus),
+                ),
+              ],
+            ),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: _incrementCounter,
+      //   tooltip: 'Increment',
+      //   child: const Icon(Icons.add),
+      // ),
     );
   }
 }
