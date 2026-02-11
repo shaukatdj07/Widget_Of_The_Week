@@ -37,11 +37,6 @@ class _MyHomePageState extends State<MyHomePage> {
       _counter++;
     });
   }
-  void _decrementCounter() {
-    setState(() {
-      _counter--;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -67,9 +62,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 FloatingActionButton(onPressed: _incrementCounter,
                 child: Icon(CupertinoIcons.plus),
                 ),
-                FloatingActionButton(onPressed: _decrementCounter,
-                child: Icon(CupertinoIcons.minus),
-                ),
+                // FloatingActionButton(onPressed: _decrementCounter,
+                // child: Icon(CupertinoIcons.minus),
+                // ),
               ],
             ),
           ],
