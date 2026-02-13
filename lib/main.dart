@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/login&register_screens/login_screen.dart';
+import 'package:frontend/school_management/screens/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: LoginScreen(),
+      home: SplashScreen(),
     );
   }
 }
