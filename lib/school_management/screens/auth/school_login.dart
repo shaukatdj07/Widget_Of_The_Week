@@ -51,7 +51,7 @@ class SchoolLogin extends StatelessWidget {
                     },
                     validator: (value){
                       if(value!.isEmpty){
-                       return 'Please Enter Email';
+                       return 'Please Enter Your Email';
                       }
                       else if(!value.contains('@')){
                         return 'Please Enter A Valid Email';
@@ -78,7 +78,6 @@ class SchoolLogin extends StatelessWidget {
                     ),
                     onChanged: (value){
                       pass = value;
-
                     },
                     validator: (value){
                       if(value!.length< 6){
